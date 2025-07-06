@@ -19,8 +19,6 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-#loaded_model=pickle.load(open('trained_model.pkl', 'rb'))
-
 #Creating function for prediction
 def house_prediction(input_data):
     
