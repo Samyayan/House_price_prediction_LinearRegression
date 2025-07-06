@@ -4,11 +4,22 @@ Created on Sun Jul  6 20:48:07 2025
 
 @author: samya
 """
-
-import numpy as np
+from flask import Flask, request, jsonify, render_template
 import pickle
-import streamlit as st
-loaded_model=pickle.load(open('trained_model.pkl', 'rb'))
+import numpy as np
+
+# Load the trained model
+model_path = 'model.pkl'
+with open(trained_model.pkl, 'rb') as file:
+    model = pickle.load(trained_model.pkl)
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+#loaded_model=pickle.load(open('trained_model.pkl', 'rb'))
 
 #Creating function for prediction
 def house_prediction(input_data):
