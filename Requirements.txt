@@ -1,8 +1,8 @@
+pip install -U scikit-learn
 numpy
 pandas
 seaborn
 matplotlib
 scikit-learn==1.5.1
-sklearn
 pickle
 
