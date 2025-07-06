@@ -22,15 +22,17 @@ def house_prediction(input_data):
 def main():
     st.title ('House Price Prediction')
     
-    avg_area_income=st.number_input('Enter avg. area income')
-    avg_area_house_age=st.number_input('Enter avg. area house age')
-    avg_area_number_of_rooms=st.number_input('Enter avg. area no of rooms')
-    avg_area_number_of_bedrooms=st.number_input('Enter avg. area no of bedrooms')
-    area_population=st.number_input('Enter area population')
-    
+    MedInc=st.number_input('Enter MedInc')
+    HouseAge=st.number_input('Enter house age')
+    AveRooms=st.number_input('Enter avg. area no of rooms')
+    AveBedrms=st.number_input('Enter avg. area no of bedrooms')
+    Population	=st.number_input('Enter area population')
+    AveOccup=st.number_input('Enter avg occupancy')
+    Latitude=st.number_input('Enter latitude')
+    Longitude=st.number_input('Enter longitude')
     Price=''
     if st.button('House price'):
-        Price=house_prediction([avg_area_income, avg_area_house_age, avg_area_number_of_rooms, avg_area_number_of_bedrooms, area_population])
+        Price=house_prediction([MedInc, HouseAge, AveRooms, AveBedrms, Population, AveOccup, Latitude, Longitude])
     
     st.success(Price)
 
