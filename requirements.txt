@@ -1,8 +1,0 @@
-scikit-learn==1.5.1
-sklearn
-numpy
-pandas
-seaborn
-matplotlib
-pickle
-
