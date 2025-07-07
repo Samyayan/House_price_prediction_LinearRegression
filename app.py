@@ -14,7 +14,7 @@ with open("house_price_model.pkl", "rb") as model_file:
 def home():
     return render_template('index.html')
 
-@app.route("/predict", methods=["HEAD" , "POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     int_features= [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
